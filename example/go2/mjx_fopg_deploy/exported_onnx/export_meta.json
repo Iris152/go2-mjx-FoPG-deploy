@@ -1,0 +1,26 @@
+{
+  "format": "onnx",
+  "policy_type": "brax_apg_deterministic",
+  "input_dtype": "float32",
+  "opset": 17,
+  "baseline": {
+    "checkpoint": "/home/iris/文档/MJX/go2_policy_export/trotting_2hz_policy",
+    "onnx": "/home/iris/文档/MJX/exported_onnx/trotting_2hz_policy.onnx",
+    "obs_size": 40,
+    "action_size": 12,
+    "hidden_layer_sizes": [
+      256,
+      128
+    ]
+  },
+  "forward": {
+    "checkpoint": "/home/iris/文档/MJX/go2_policy_export/forward_locomotion_policy",
+    "onnx": "/home/iris/文档/MJX/exported_onnx/forward_locomotion_policy.onnx",
+    "obs_size": 52,
+    "action_size": 12,
+    "hidden_layer_sizes": [
+      128,
+      64
+    ]
+  }
+}
