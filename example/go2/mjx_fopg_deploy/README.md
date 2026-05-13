@@ -1,8 +1,8 @@
 # Go2 MJX/FoPG Low-Level Deploy
 
-这个目录把训练好的 MJX/FoPG Go2 策略放进 Unitree 官方 `unitree_sdk2_python` 仓库里运行。
+这个目录是 MJX/FoPG Go2 策略的 Unitree SDK2 Python 低层部署入口。
 
-这样做的目的不是改变策略本身，而是让实机部署代码和官方 SDK2 Python 的包结构、DDS/RPC 客户端、低层示例放在同一个工作区里，方便按 Unitree 示例习惯运行和排查。
+当前 GitHub 部署仓库已经把 Unitree 官方 `unitree_sdk2_python` 源码一起并入，所以不需要再把本目录手动复制到另一个 SDK 仓库里。保持这个目录结构的目的，是让部署代码和官方 SDK2 Python 的包结构、DDS/RPC 客户端、低层示例放在同一个工作区里，方便按 Unitree 示例习惯运行和排查。
 
 ## 目录内容
 
@@ -17,7 +17,7 @@
 
 ```bash
 conda activate mjx
-cd /home/a/unitree_sdk2_python
+cd /path/to/go2-mjx-FoPG-deploy
 python -m pip install -e .
 ```
 
@@ -33,11 +33,11 @@ python -m pip install -e .
 
 ## 运行
 
-在 `unitree_sdk2_python` 仓库根目录运行：
+在部署仓库根目录运行：
 
 ```bash
 conda activate mjx
-cd /home/a/unitree_sdk2_python
+cd /path/to/go2-mjx-FoPG-deploy
 
 python example/go2/mjx_fopg_deploy/go2_unitree_sdk2_deploy.py \
   --network eno1 \
